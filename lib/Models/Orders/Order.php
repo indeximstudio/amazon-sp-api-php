@@ -26,7 +26,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
  *
  * @description Order information.
  *
- * @author   Stefan Neuhaus / ClouSale
+ * @author   Serhii Matsenko / Indeximstudio
  */
 class Order implements ModelInterface, ArrayAccess
 {
@@ -79,7 +79,9 @@ class Order implements ModelInterface, ArrayAccess
         'is_estimated_ship_date_set' => 'bool',
         'is_sold_by_ab' => 'bool',
         'assigned_ship_from_location_address' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\Address',
-        'fulfillment_instruction' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\FulfillmentInstruction',];
+        'fulfillment_instruction' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\FulfillmentInstruction',
+        'shipping_address' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\Address',
+    ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -121,7 +123,9 @@ class Order implements ModelInterface, ArrayAccess
         'is_estimated_ship_date_set' => null,
         'is_sold_by_ab' => null,
         'assigned_ship_from_location_address' => null,
-        'fulfillment_instruction' => null,];
+        'fulfillment_instruction' => null,
+        'shipping_address' => null,
+    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization.
@@ -184,7 +188,9 @@ class Order implements ModelInterface, ArrayAccess
         'is_estimated_ship_date_set' => 'IsEstimatedShipDateSet',
         'is_sold_by_ab' => 'IsSoldByAB',
         'assigned_ship_from_location_address' => 'AssignedShipFromLocationAddress',
-        'fulfillment_instruction' => 'FulfillmentInstruction',];
+        'fulfillment_instruction' => 'FulfillmentInstruction',
+        'shipping_address' => 'ShippingAddress',
+    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses).
@@ -226,7 +232,9 @@ class Order implements ModelInterface, ArrayAccess
         'is_estimated_ship_date_set' => 'setIsEstimatedShipDateSet',
         'is_sold_by_ab' => 'setIsSoldByAb',
         'assigned_ship_from_location_address' => 'setAssignedShipFromLocationAddress',
-        'fulfillment_instruction' => 'setFulfillmentInstruction',];
+        'fulfillment_instruction' => 'setFulfillmentInstruction',
+        'shipping_address' => 'setShippingAddress',
+    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests).
@@ -268,7 +276,9 @@ class Order implements ModelInterface, ArrayAccess
         'is_estimated_ship_date_set' => 'getIsEstimatedShipDateSet',
         'is_sold_by_ab' => 'getIsSoldByAb',
         'assigned_ship_from_location_address' => 'getAssignedShipFromLocationAddress',
-        'fulfillment_instruction' => 'getFulfillmentInstruction',];
+        'fulfillment_instruction' => 'getFulfillmentInstruction',
+        'shipping_address' => 'getShippingAddress',
+    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -438,6 +448,7 @@ class Order implements ModelInterface, ArrayAccess
         $this->container['is_sold_by_ab'] = isset($data['is_sold_by_ab']) ? $data['is_sold_by_ab'] : null;
         $this->container['assigned_ship_from_location_address'] = isset($data['assigned_ship_from_location_address']) ? $data['assigned_ship_from_location_address'] : null;
         $this->container['fulfillment_instruction'] = isset($data['fulfillment_instruction']) ? $data['fulfillment_instruction'] : null;
+        $this->container['shipping_address'] = $data['fulfillment_instruction'] ?? null;
     }
 
     /**
@@ -1359,6 +1370,30 @@ class Order implements ModelInterface, ArrayAccess
     public function setFulfillmentInstruction($fulfillment_instruction)
     {
         $this->container['fulfillment_instruction'] = $fulfillment_instruction;
+
+        return $this;
+    }
+
+    /**
+     * Gets shipping_address.
+     *
+     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Orders\Address
+     */
+    public function getShippingAddress()
+    {
+        return $this->container['shipping_address'];
+    }
+
+    /**
+     * Sets shipping_address.
+     *
+     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Orders\Address $assigned_ship_from_location_address assigned_ship_from_location_address
+     *
+     * @return $this
+     */
+    public function setShippingAddress($shipping_address)
+    {
+        $this->container['shipping_address'] = $shipping_address;
 
         return $this;
     }
