@@ -24,7 +24,6 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 /**
  * Order Class Doc Comment.
  *
-
  * @description Order information.
  *
  * @author   Stefan Neuhaus / ClouSale
@@ -47,40 +46,40 @@ class Order implements ModelInterface, ArrayAccess
      */
     protected static $swaggerTypes = [
         'amazon_order_id' => 'string',
-'seller_order_id' => 'string',
-'purchase_date' => 'string',
-'last_update_date' => 'string',
-'order_status' => 'string',
-'fulfillment_channel' => 'string',
-'sales_channel' => 'string',
-'order_channel' => 'string',
-'ship_service_level' => 'string',
-'order_total' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money',
-'number_of_items_shipped' => 'int',
-'number_of_items_unshipped' => 'int',
-'payment_execution_detail' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\PaymentExecutionDetailItemList',
-'payment_method' => 'string',
-'payment_method_details' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\PaymentMethodDetailItemList',
-'marketplace_id' => 'string',
-'shipment_service_level_category' => 'string',
-'easy_ship_shipment_status' => 'string',
-'cba_displayable_shipping_label' => 'string',
-'order_type' => 'string',
-'earliest_ship_date' => 'string',
-'latest_ship_date' => 'string',
-'earliest_delivery_date' => 'string',
-'latest_delivery_date' => 'string',
-'is_business_order' => 'bool',
-'is_prime' => 'bool',
-'is_premium_order' => 'bool',
-'is_global_express_enabled' => 'bool',
-'replaced_order_id' => 'string',
-'is_replacement_order' => 'bool',
-'promise_response_due_date' => 'string',
-'is_estimated_ship_date_set' => 'bool',
-'is_sold_by_ab' => 'bool',
-'assigned_ship_from_location_address' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\Address',
-'fulfillment_instruction' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\FulfillmentInstruction',    ];
+        'seller_order_id' => 'string',
+        'purchase_date' => 'string',
+        'last_update_date' => 'string',
+        'order_status' => 'string',
+        'fulfillment_channel' => 'string',
+        'sales_channel' => 'string',
+        'order_channel' => 'string',
+        'ship_service_level' => 'string',
+        'order_total' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\Money',
+        'number_of_items_shipped' => 'int',
+        'number_of_items_unshipped' => 'int',
+        'payment_execution_detail' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\PaymentExecutionDetailItemList',
+        'payment_method' => 'string',
+        'payment_method_details' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\PaymentMethodDetailItemList',
+        'marketplace_id' => 'string',
+        'shipment_service_level_category' => 'string',
+        'easy_ship_shipment_status' => 'string',
+        'cba_displayable_shipping_label' => 'string',
+        'order_type' => 'string',
+        'earliest_ship_date' => 'string',
+        'latest_ship_date' => 'string',
+        'earliest_delivery_date' => 'string',
+        'latest_delivery_date' => 'string',
+        'is_business_order' => 'bool',
+        'is_prime' => 'bool',
+        'is_premium_order' => 'bool',
+        'is_global_express_enabled' => 'bool',
+        'replaced_order_id' => 'string',
+        'is_replacement_order' => 'bool',
+        'promise_response_due_date' => 'string',
+        'is_estimated_ship_date_set' => 'bool',
+        'is_sold_by_ab' => 'bool',
+        'assigned_ship_from_location_address' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\Address',
+        'fulfillment_instruction' => '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\FulfillmentInstruction',];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
@@ -89,40 +88,40 @@ class Order implements ModelInterface, ArrayAccess
      */
     protected static $swaggerFormats = [
         'amazon_order_id' => null,
-'seller_order_id' => null,
-'purchase_date' => null,
-'last_update_date' => null,
-'order_status' => null,
-'fulfillment_channel' => null,
-'sales_channel' => null,
-'order_channel' => null,
-'ship_service_level' => null,
-'order_total' => null,
-'number_of_items_shipped' => null,
-'number_of_items_unshipped' => null,
-'payment_execution_detail' => null,
-'payment_method' => null,
-'payment_method_details' => null,
-'marketplace_id' => null,
-'shipment_service_level_category' => null,
-'easy_ship_shipment_status' => null,
-'cba_displayable_shipping_label' => null,
-'order_type' => null,
-'earliest_ship_date' => null,
-'latest_ship_date' => null,
-'earliest_delivery_date' => null,
-'latest_delivery_date' => null,
-'is_business_order' => null,
-'is_prime' => null,
-'is_premium_order' => null,
-'is_global_express_enabled' => null,
-'replaced_order_id' => null,
-'is_replacement_order' => null,
-'promise_response_due_date' => null,
-'is_estimated_ship_date_set' => null,
-'is_sold_by_ab' => null,
-'assigned_ship_from_location_address' => null,
-'fulfillment_instruction' => null,    ];
+        'seller_order_id' => null,
+        'purchase_date' => null,
+        'last_update_date' => null,
+        'order_status' => null,
+        'fulfillment_channel' => null,
+        'sales_channel' => null,
+        'order_channel' => null,
+        'ship_service_level' => null,
+        'order_total' => null,
+        'number_of_items_shipped' => null,
+        'number_of_items_unshipped' => null,
+        'payment_execution_detail' => null,
+        'payment_method' => null,
+        'payment_method_details' => null,
+        'marketplace_id' => null,
+        'shipment_service_level_category' => null,
+        'easy_ship_shipment_status' => null,
+        'cba_displayable_shipping_label' => null,
+        'order_type' => null,
+        'earliest_ship_date' => null,
+        'latest_ship_date' => null,
+        'earliest_delivery_date' => null,
+        'latest_delivery_date' => null,
+        'is_business_order' => null,
+        'is_prime' => null,
+        'is_premium_order' => null,
+        'is_global_express_enabled' => null,
+        'replaced_order_id' => null,
+        'is_replacement_order' => null,
+        'promise_response_due_date' => null,
+        'is_estimated_ship_date_set' => null,
+        'is_sold_by_ab' => null,
+        'assigned_ship_from_location_address' => null,
+        'fulfillment_instruction' => null,];
 
     /**
      * Array of property to type mappings. Used for (de)serialization.
@@ -152,40 +151,40 @@ class Order implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'amazon_order_id' => 'AmazonOrderId',
-'seller_order_id' => 'SellerOrderId',
-'purchase_date' => 'PurchaseDate',
-'last_update_date' => 'LastUpdateDate',
-'order_status' => 'OrderStatus',
-'fulfillment_channel' => 'FulfillmentChannel',
-'sales_channel' => 'SalesChannel',
-'order_channel' => 'OrderChannel',
-'ship_service_level' => 'ShipServiceLevel',
-'order_total' => 'OrderTotal',
-'number_of_items_shipped' => 'NumberOfItemsShipped',
-'number_of_items_unshipped' => 'NumberOfItemsUnshipped',
-'payment_execution_detail' => 'PaymentExecutionDetail',
-'payment_method' => 'PaymentMethod',
-'payment_method_details' => 'PaymentMethodDetails',
-'marketplace_id' => 'MarketplaceId',
-'shipment_service_level_category' => 'ShipmentServiceLevelCategory',
-'easy_ship_shipment_status' => 'EasyShipShipmentStatus',
-'cba_displayable_shipping_label' => 'CbaDisplayableShippingLabel',
-'order_type' => 'OrderType',
-'earliest_ship_date' => 'EarliestShipDate',
-'latest_ship_date' => 'LatestShipDate',
-'earliest_delivery_date' => 'EarliestDeliveryDate',
-'latest_delivery_date' => 'LatestDeliveryDate',
-'is_business_order' => 'IsBusinessOrder',
-'is_prime' => 'IsPrime',
-'is_premium_order' => 'IsPremiumOrder',
-'is_global_express_enabled' => 'IsGlobalExpressEnabled',
-'replaced_order_id' => 'ReplacedOrderId',
-'is_replacement_order' => 'IsReplacementOrder',
-'promise_response_due_date' => 'PromiseResponseDueDate',
-'is_estimated_ship_date_set' => 'IsEstimatedShipDateSet',
-'is_sold_by_ab' => 'IsSoldByAB',
-'assigned_ship_from_location_address' => 'AssignedShipFromLocationAddress',
-'fulfillment_instruction' => 'FulfillmentInstruction',    ];
+        'seller_order_id' => 'SellerOrderId',
+        'purchase_date' => 'PurchaseDate',
+        'last_update_date' => 'LastUpdateDate',
+        'order_status' => 'OrderStatus',
+        'fulfillment_channel' => 'FulfillmentChannel',
+        'sales_channel' => 'SalesChannel',
+        'order_channel' => 'OrderChannel',
+        'ship_service_level' => 'ShipServiceLevel',
+        'order_total' => 'OrderTotal',
+        'number_of_items_shipped' => 'NumberOfItemsShipped',
+        'number_of_items_unshipped' => 'NumberOfItemsUnshipped',
+        'payment_execution_detail' => 'PaymentExecutionDetail',
+        'payment_method' => 'PaymentMethod',
+        'payment_method_details' => 'PaymentMethodDetails',
+        'marketplace_id' => 'MarketplaceId',
+        'shipment_service_level_category' => 'ShipmentServiceLevelCategory',
+        'easy_ship_shipment_status' => 'EasyShipShipmentStatus',
+        'cba_displayable_shipping_label' => 'CbaDisplayableShippingLabel',
+        'order_type' => 'OrderType',
+        'earliest_ship_date' => 'EarliestShipDate',
+        'latest_ship_date' => 'LatestShipDate',
+        'earliest_delivery_date' => 'EarliestDeliveryDate',
+        'latest_delivery_date' => 'LatestDeliveryDate',
+        'is_business_order' => 'IsBusinessOrder',
+        'is_prime' => 'IsPrime',
+        'is_premium_order' => 'IsPremiumOrder',
+        'is_global_express_enabled' => 'IsGlobalExpressEnabled',
+        'replaced_order_id' => 'ReplacedOrderId',
+        'is_replacement_order' => 'IsReplacementOrder',
+        'promise_response_due_date' => 'PromiseResponseDueDate',
+        'is_estimated_ship_date_set' => 'IsEstimatedShipDateSet',
+        'is_sold_by_ab' => 'IsSoldByAB',
+        'assigned_ship_from_location_address' => 'AssignedShipFromLocationAddress',
+        'fulfillment_instruction' => 'FulfillmentInstruction',];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses).
@@ -194,40 +193,40 @@ class Order implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'amazon_order_id' => 'setAmazonOrderId',
-'seller_order_id' => 'setSellerOrderId',
-'purchase_date' => 'setPurchaseDate',
-'last_update_date' => 'setLastUpdateDate',
-'order_status' => 'setOrderStatus',
-'fulfillment_channel' => 'setFulfillmentChannel',
-'sales_channel' => 'setSalesChannel',
-'order_channel' => 'setOrderChannel',
-'ship_service_level' => 'setShipServiceLevel',
-'order_total' => 'setOrderTotal',
-'number_of_items_shipped' => 'setNumberOfItemsShipped',
-'number_of_items_unshipped' => 'setNumberOfItemsUnshipped',
-'payment_execution_detail' => 'setPaymentExecutionDetail',
-'payment_method' => 'setPaymentMethod',
-'payment_method_details' => 'setPaymentMethodDetails',
-'marketplace_id' => 'setMarketplaceId',
-'shipment_service_level_category' => 'setShipmentServiceLevelCategory',
-'easy_ship_shipment_status' => 'setEasyShipShipmentStatus',
-'cba_displayable_shipping_label' => 'setCbaDisplayableShippingLabel',
-'order_type' => 'setOrderType',
-'earliest_ship_date' => 'setEarliestShipDate',
-'latest_ship_date' => 'setLatestShipDate',
-'earliest_delivery_date' => 'setEarliestDeliveryDate',
-'latest_delivery_date' => 'setLatestDeliveryDate',
-'is_business_order' => 'setIsBusinessOrder',
-'is_prime' => 'setIsPrime',
-'is_premium_order' => 'setIsPremiumOrder',
-'is_global_express_enabled' => 'setIsGlobalExpressEnabled',
-'replaced_order_id' => 'setReplacedOrderId',
-'is_replacement_order' => 'setIsReplacementOrder',
-'promise_response_due_date' => 'setPromiseResponseDueDate',
-'is_estimated_ship_date_set' => 'setIsEstimatedShipDateSet',
-'is_sold_by_ab' => 'setIsSoldByAb',
-'assigned_ship_from_location_address' => 'setAssignedShipFromLocationAddress',
-'fulfillment_instruction' => 'setFulfillmentInstruction',    ];
+        'seller_order_id' => 'setSellerOrderId',
+        'purchase_date' => 'setPurchaseDate',
+        'last_update_date' => 'setLastUpdateDate',
+        'order_status' => 'setOrderStatus',
+        'fulfillment_channel' => 'setFulfillmentChannel',
+        'sales_channel' => 'setSalesChannel',
+        'order_channel' => 'setOrderChannel',
+        'ship_service_level' => 'setShipServiceLevel',
+        'order_total' => 'setOrderTotal',
+        'number_of_items_shipped' => 'setNumberOfItemsShipped',
+        'number_of_items_unshipped' => 'setNumberOfItemsUnshipped',
+        'payment_execution_detail' => 'setPaymentExecutionDetail',
+        'payment_method' => 'setPaymentMethod',
+        'payment_method_details' => 'setPaymentMethodDetails',
+        'marketplace_id' => 'setMarketplaceId',
+        'shipment_service_level_category' => 'setShipmentServiceLevelCategory',
+        'easy_ship_shipment_status' => 'setEasyShipShipmentStatus',
+        'cba_displayable_shipping_label' => 'setCbaDisplayableShippingLabel',
+        'order_type' => 'setOrderType',
+        'earliest_ship_date' => 'setEarliestShipDate',
+        'latest_ship_date' => 'setLatestShipDate',
+        'earliest_delivery_date' => 'setEarliestDeliveryDate',
+        'latest_delivery_date' => 'setLatestDeliveryDate',
+        'is_business_order' => 'setIsBusinessOrder',
+        'is_prime' => 'setIsPrime',
+        'is_premium_order' => 'setIsPremiumOrder',
+        'is_global_express_enabled' => 'setIsGlobalExpressEnabled',
+        'replaced_order_id' => 'setReplacedOrderId',
+        'is_replacement_order' => 'setIsReplacementOrder',
+        'promise_response_due_date' => 'setPromiseResponseDueDate',
+        'is_estimated_ship_date_set' => 'setIsEstimatedShipDateSet',
+        'is_sold_by_ab' => 'setIsSoldByAb',
+        'assigned_ship_from_location_address' => 'setAssignedShipFromLocationAddress',
+        'fulfillment_instruction' => 'setFulfillmentInstruction',];
 
     /**
      * Array of attributes to getter functions (for serialization of requests).
@@ -236,40 +235,40 @@ class Order implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'amazon_order_id' => 'getAmazonOrderId',
-'seller_order_id' => 'getSellerOrderId',
-'purchase_date' => 'getPurchaseDate',
-'last_update_date' => 'getLastUpdateDate',
-'order_status' => 'getOrderStatus',
-'fulfillment_channel' => 'getFulfillmentChannel',
-'sales_channel' => 'getSalesChannel',
-'order_channel' => 'getOrderChannel',
-'ship_service_level' => 'getShipServiceLevel',
-'order_total' => 'getOrderTotal',
-'number_of_items_shipped' => 'getNumberOfItemsShipped',
-'number_of_items_unshipped' => 'getNumberOfItemsUnshipped',
-'payment_execution_detail' => 'getPaymentExecutionDetail',
-'payment_method' => 'getPaymentMethod',
-'payment_method_details' => 'getPaymentMethodDetails',
-'marketplace_id' => 'getMarketplaceId',
-'shipment_service_level_category' => 'getShipmentServiceLevelCategory',
-'easy_ship_shipment_status' => 'getEasyShipShipmentStatus',
-'cba_displayable_shipping_label' => 'getCbaDisplayableShippingLabel',
-'order_type' => 'getOrderType',
-'earliest_ship_date' => 'getEarliestShipDate',
-'latest_ship_date' => 'getLatestShipDate',
-'earliest_delivery_date' => 'getEarliestDeliveryDate',
-'latest_delivery_date' => 'getLatestDeliveryDate',
-'is_business_order' => 'getIsBusinessOrder',
-'is_prime' => 'getIsPrime',
-'is_premium_order' => 'getIsPremiumOrder',
-'is_global_express_enabled' => 'getIsGlobalExpressEnabled',
-'replaced_order_id' => 'getReplacedOrderId',
-'is_replacement_order' => 'getIsReplacementOrder',
-'promise_response_due_date' => 'getPromiseResponseDueDate',
-'is_estimated_ship_date_set' => 'getIsEstimatedShipDateSet',
-'is_sold_by_ab' => 'getIsSoldByAb',
-'assigned_ship_from_location_address' => 'getAssignedShipFromLocationAddress',
-'fulfillment_instruction' => 'getFulfillmentInstruction',    ];
+        'seller_order_id' => 'getSellerOrderId',
+        'purchase_date' => 'getPurchaseDate',
+        'last_update_date' => 'getLastUpdateDate',
+        'order_status' => 'getOrderStatus',
+        'fulfillment_channel' => 'getFulfillmentChannel',
+        'sales_channel' => 'getSalesChannel',
+        'order_channel' => 'getOrderChannel',
+        'ship_service_level' => 'getShipServiceLevel',
+        'order_total' => 'getOrderTotal',
+        'number_of_items_shipped' => 'getNumberOfItemsShipped',
+        'number_of_items_unshipped' => 'getNumberOfItemsUnshipped',
+        'payment_execution_detail' => 'getPaymentExecutionDetail',
+        'payment_method' => 'getPaymentMethod',
+        'payment_method_details' => 'getPaymentMethodDetails',
+        'marketplace_id' => 'getMarketplaceId',
+        'shipment_service_level_category' => 'getShipmentServiceLevelCategory',
+        'easy_ship_shipment_status' => 'getEasyShipShipmentStatus',
+        'cba_displayable_shipping_label' => 'getCbaDisplayableShippingLabel',
+        'order_type' => 'getOrderType',
+        'earliest_ship_date' => 'getEarliestShipDate',
+        'latest_ship_date' => 'getLatestShipDate',
+        'earliest_delivery_date' => 'getEarliestDeliveryDate',
+        'latest_delivery_date' => 'getLatestDeliveryDate',
+        'is_business_order' => 'getIsBusinessOrder',
+        'is_prime' => 'getIsPrime',
+        'is_premium_order' => 'getIsPremiumOrder',
+        'is_global_express_enabled' => 'getIsGlobalExpressEnabled',
+        'replaced_order_id' => 'getReplacedOrderId',
+        'is_replacement_order' => 'getIsReplacementOrder',
+        'promise_response_due_date' => 'getPromiseResponseDueDate',
+        'is_estimated_ship_date_set' => 'getIsEstimatedShipDateSet',
+        'is_sold_by_ab' => 'getIsSoldByAb',
+        'assigned_ship_from_location_address' => 'getAssignedShipFromLocationAddress',
+        'fulfillment_instruction' => 'getFulfillmentInstruction',];
 
     /**
      * Array of attributes where the key is the local name,
@@ -340,13 +339,13 @@ class Order implements ModelInterface, ArrayAccess
     {
         return [
             self::ORDER_STATUS_PENDING,
-self::ORDER_STATUS_UNSHIPPED,
-self::ORDER_STATUS_PARTIALLY_SHIPPED,
-self::ORDER_STATUS_SHIPPED,
-self::ORDER_STATUS_CANCELED,
-self::ORDER_STATUS_UNFULFILLABLE,
-self::ORDER_STATUS_INVOICE_UNCONFIRMED,
-self::ORDER_STATUS_PENDING_AVAILABILITY,        ];
+            self::ORDER_STATUS_UNSHIPPED,
+            self::ORDER_STATUS_PARTIALLY_SHIPPED,
+            self::ORDER_STATUS_SHIPPED,
+            self::ORDER_STATUS_CANCELED,
+            self::ORDER_STATUS_UNFULFILLABLE,
+            self::ORDER_STATUS_INVOICE_UNCONFIRMED,
+            self::ORDER_STATUS_PENDING_AVAILABILITY,];
     }
 
     /**
@@ -358,7 +357,7 @@ self::ORDER_STATUS_PENDING_AVAILABILITY,        ];
     {
         return [
             self::FULFILLMENT_CHANNEL_MFN,
-self::FULFILLMENT_CHANNEL_AFN,        ];
+            self::FULFILLMENT_CHANNEL_AFN,];
     }
 
     /**
@@ -370,8 +369,8 @@ self::FULFILLMENT_CHANNEL_AFN,        ];
     {
         return [
             self::PAYMENT_METHOD_COD,
-self::PAYMENT_METHOD_CVS,
-self::PAYMENT_METHOD_OTHER,        ];
+            self::PAYMENT_METHOD_CVS,
+            self::PAYMENT_METHOD_OTHER,];
     }
 
     /**
@@ -383,10 +382,10 @@ self::PAYMENT_METHOD_OTHER,        ];
     {
         return [
             self::ORDER_TYPE_STANDARD_ORDER,
-self::ORDER_TYPE_LONG_LEAD_TIME_ORDER,
-self::ORDER_TYPE_PREORDER,
-self::ORDER_TYPE_BACK_ORDER,
-self::ORDER_TYPE_SOURCING_ON_DEMAND_ORDER,        ];
+            self::ORDER_TYPE_LONG_LEAD_TIME_ORDER,
+            self::ORDER_TYPE_PREORDER,
+            self::ORDER_TYPE_BACK_ORDER,
+            self::ORDER_TYPE_SOURCING_ON_DEMAND_ORDER,];
     }
 
     /**
@@ -1391,8 +1390,8 @@ self::ORDER_TYPE_SOURCING_ON_DEMAND_ORDER,        ];
     /**
      * Sets value based on offset.
      *
-     * @param int   $offset Offset
-     * @param mixed $value  Value to be set
+     * @param int $offset Offset
+     * @param mixed $value Value to be set
      *
      * @return void
      */
