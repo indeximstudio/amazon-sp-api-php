@@ -1,5 +1,5 @@
 {
-    "name": "clousale/amazon-sp-api-php",
+    "name": "indeximstudio/amazon-sp-api-php",
     "description": "",
     "keywords": [
         "api",
@@ -8,12 +8,10 @@
         "sp-api",
         "clousale"
     ],
-    "homepage": "http://www.clousale.com",
     "license": "MIT",
     "authors": [
         {
-            "name": "ClouSale",
-            "homepage": "https://www.clousale.com"
+            "name": "Serhii Matsenko",
         }
     ],
     "require": {
