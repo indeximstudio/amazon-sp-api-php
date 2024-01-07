@@ -301,7 +301,11 @@ class OrderItem implements ModelInterface, ArrayAccess
     const DEEMED_RESELLER_CATEGORY_GB_VOEC = 'GB_VOEC';
     const DEEMED_RESELLER_CATEGORY_NZ_VOEC= 'NZ_VOEC';
     const DEEMED_RESELLER_CATEGORY_AU_VOEC= 'AU_VOEC';
-    
+    const DEEMED_RESELLER_CATEGORY_MY_VOEC= 'MY_VOEC';
+    const DEEMED_RESELLER_CATEGORY_SG_VOEC= 'SG_VOEC';
+    const DEEMED_RESELLER_CATEGORY_NO_VOEC= 'NO_VOEC';
+    const DEEMED_RESELLER_CATEGORY_CH_SUPPLIER_IMPORT= 'CH_SUPPLIER_IMPORT';
+
 
     /**
      * Gets allowable values of the enum.
@@ -311,12 +315,16 @@ class OrderItem implements ModelInterface, ArrayAccess
     public function getDeemedResellerCategoryAllowableValues()
     {
         return [
-            self::DEEMED_RESELLER_CATEGORY_IOSS,
-            self::DEEMED_RESELLER_CATEGORY_UOSS,
-            self::DEEMED_RESELLER_CATEGORY_CA_MPF,
-            self::DEEMED_RESELLER_CATEGORY_GB_VOEC,
-            self::DEEMED_RESELLER_CATEGORY_NZ_VOEC,
-            self::DEEMED_RESELLER_CATEGORY_AU_VOEC
+                self::DEEMED_RESELLER_CATEGORY_IOSS,
+                self::DEEMED_RESELLER_CATEGORY_UOSS,
+                self::DEEMED_RESELLER_CATEGORY_CA_MPF,
+                self::DEEMED_RESELLER_CATEGORY_GB_VOEC,
+                self::DEEMED_RESELLER_CATEGORY_NZ_VOEC,
+                self::DEEMED_RESELLER_CATEGORY_AU_VOEC,
+                self::DEEMED_RESELLER_CATEGORY_MY_VOEC,
+                self::DEEMED_RESELLER_CATEGORY_SG_VOEC,
+                self::DEEMED_RESELLER_CATEGORY_NO_VOEC,
+                self::DEEMED_RESELLER_CATEGORY_CH_SUPPLIER_IMPORT,
         ];
     }
 
