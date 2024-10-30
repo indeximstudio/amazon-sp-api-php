@@ -169,7 +169,9 @@ class TaxCollection implements ModelInterface, ArrayAccess
     public function getResponsiblePartyAllowableValues()
     {
         return [
-            self::RESPONSIBLE_PARTY_AMAZON_SERVICES_INC,        ];
+            self::RESPONSIBLE_PARTY_AMAZON_SERVICES_INC,       
+            ''
+            ];
     }
 
     /**
